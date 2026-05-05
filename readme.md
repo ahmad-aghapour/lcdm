@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/diffusion-process-overview.svg" alt="LCDM overview" width="950"/>
+  <img src="assets/diffusion-process-overview.svg" alt="LCDM overview" width="850"/>
 </p>
 
 <p align="center">
