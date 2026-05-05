@@ -1,0 +1,31 @@
+dataset:
+  name: lsun_church
+  input_dir: ../lsun_church_256_subset
+  image_size: 256
+  file_ext: png
+  max_images: 1000
+  center_crop: false
+
+model:
+  name: hf_diffusers
+  pretrained_id: google/ddpm-ema-church-256
+  use_fp16: false
+
+task:
+  name: superres
+
+operator:
+  name: mean_sr
+  scale: 8
+
+sampler:
+  name: ddnm
+
+sampling:
+  batch_size: 8
+  num_inference_steps: 200
+  eta: 0.85
+  seed: 42
+
+output:
+  dir: outputs/lsun_church_superres_mean_ddnm

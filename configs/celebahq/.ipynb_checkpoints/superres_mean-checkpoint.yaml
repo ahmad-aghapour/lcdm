@@ -1,0 +1,36 @@
+dataset:
+  name: celebahq
+  input_dir: ../celabhq_test
+  image_size: 256
+  file_ext: png
+  max_images: 1000
+  center_crop: true
+
+model:
+  name: celeba_custom
+  checkpoint: celeba_hq.ckpt
+  use_fp16: false
+
+task:
+  name: superres
+
+operator:
+  name: mean_sr
+  scale: 8
+
+warmup:
+  name: underdamped
+  start_fraction: 0.75
+  n_steps: 50
+  friction: 0.5
+  h_mul: 1.0
+  init_noise_std: 1.0
+
+sampling:
+  batch_size: 8
+  num_inference_steps: 200
+  eta: 0.85
+  seed: 42
+
+output:
+  dir: outputs/celebahq_superres_mean

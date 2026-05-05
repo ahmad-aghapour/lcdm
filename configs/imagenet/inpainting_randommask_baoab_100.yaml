@@ -1,0 +1,42 @@
+dataset:
+  name: imagenet
+  input_dir: ../ImageNet/imagenet_val_jpg
+  image_size: 256
+  file_ext: jpg
+  max_images: 1000
+  center_crop: true
+
+model:
+  name: openai_unet
+  checkpoint: 256x256_diffusion_uncond.pt
+  use_fp16: true
+
+task:
+  name: inpainting
+
+operator:
+  name: random_box_mask
+  box_h: 100
+  box_w: 100
+  mask_seed: 2025
+
+sampler:
+  name: projected_ddim
+
+warmup:
+  name: underdamped
+  splitting: baoab
+  start_fraction: 0.5
+  n_steps: 50
+  friction: 0.1
+  h_mul: 1.0
+  init_noise_std: 0.5
+
+sampling:
+  batch_size: 8
+  num_inference_steps: 100
+  eta: 0.85
+  seed: 42
+
+output:
+  dir: outputs/imagenet_inpainting_randommask_baoab_100

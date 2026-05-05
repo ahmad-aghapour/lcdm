@@ -1,0 +1,39 @@
+dataset:
+  name: lsun_church
+  input_dir: ../lsun_church_256_subset
+  image_size: 256
+  file_ext: png
+  max_images: 1000
+  center_crop: false
+
+model:
+  name: hf_diffusers
+  pretrained_id: google/ddpm-ema-church-256
+  use_fp16: false
+
+task:
+  name: inpainting
+
+operator:
+  name: mask
+  top: 100
+  bottom: 0
+  left: 0
+  right: 100
+
+warmup:
+  name: underdamped
+  start_fraction: 0.5
+  n_steps: 50
+  friction: 0.1
+  h_mul: 1.0
+  init_noise_std: 0.5
+
+sampling:
+  batch_size: 8
+  num_inference_steps: 100
+  eta: 0.85
+  seed: 42
+
+output:
+  dir: outputs/lsun_church_inpainting
