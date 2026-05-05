@@ -1,6 +1,4 @@
-Paste this as your `README.md`.
 
-````markdown
 # LCDM: Langevin-Conditioned Diffusion Model
 
 <p align="center">
@@ -407,5 +405,3 @@ This repository builds on ideas and code components from:
 * OpenAI Guided Diffusion
 * DDNM
 
-```
-```
