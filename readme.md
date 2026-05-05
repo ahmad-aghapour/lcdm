@@ -2,9 +2,7 @@
 # LCDM: Langevin-Conditioned Diffusion Model
 
 <p align="center">
-  <a href="PASTE_PAPER_LINK_HERE"><b>Paper</b></a> |
   <a href="PASTE_ARXIV_LINK_HERE"><b>arXiv</b></a> |
-  <a href="PASTE_PROJECT_PAGE_HERE"><b>Project Page</b></a>
 </p>
 
 <p align="center">
@@ -382,20 +380,6 @@ Both are run under a matched **100 NFE** budget.
 
 ---
 
-
-
-## Citation
-
-```bibtex
-@article{yourpaper2025lcdm,
-  title   = {Langevin Conditional Diffusion Model for Linear Inverse Problems},
-  author  = {Your Name and Coauthors},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
-  year    = {2025}
-}
-```
-
----
 
 ## Acknowledgements
 
