@@ -2,7 +2,7 @@
 # LCDM: Langevin-Conditioned Diffusion Model
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2605.05387"><b>arXiv</b></a> |
+  <a href="https://arxiv.org/abs/2605.05387"><b>arXiv</b></a> 
 </p>
 
 <p align="center">
